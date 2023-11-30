@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react';
 import { WeatherContext } from '../App';
 
 const Search = () => {
-  const { setSearchText, setWeatherData } = useContext(WeatherContext);
+  const { setSearchText } = useContext(WeatherContext);
   const [searchInput, setSearchInput] = useState('');
   const [error, setError] = useState('');
 
@@ -35,8 +35,9 @@ const Search = () => {
             aria-label="Search"
             value={searchInput}
             onChange={handleSearchTextChange}
+            style={{ borderColor: 'orange' }}
           />
-          <button className="btn btn-outline-primary" type="submit">
+          <button className="btn btn-outline-primary" type="submit" style={{ backgroundColor: 'orange' }}>
             Search
           </button>
         </form>

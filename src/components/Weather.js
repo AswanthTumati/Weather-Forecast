@@ -3,14 +3,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { WeatherContext } from "../App";
-//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-//import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import {LoadingOutlined} from '@ant-design/icons';
 
 
 const Weather = () => {
   const { weatherData, setWeatherData } = useContext(WeatherContext);
-  const { searchText, setSearchText } = useContext(WeatherContext);
+  const { searchText } = useContext(WeatherContext);
   const [loading, setLoading] = useState(false);
   const appId = 'b1c28ee5cbb89209c444b383bf6162d4';
   const location = searchText;
@@ -58,7 +56,7 @@ const Weather = () => {
             <div className="col-md-2" key={index}>
               <table className="table table-bordered">
               <tbody>
-                <tr className="table-secondary">
+                <tr className="table-secondary" style={{ backgroundColor: 'orange' }}>
                   <th colSpan="2">Date: {weatherItem.dt_txt.split(' ')[0]}</th>
                 </tr>
                 
