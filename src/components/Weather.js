@@ -56,7 +56,7 @@ const Weather = () => {
             <div className="col-md-2" key={index}>
               <table className="table table-bordered">
               <tbody>
-                <tr className="table-secondary" style={{ backgroundColor: 'orange' }}>
+                <tr  style={{ backgroundColor: 'orange' }}>
                   <th colSpan="2">Date: {weatherItem.dt_txt.split(' ')[0]}</th>
                 </tr>
                 
